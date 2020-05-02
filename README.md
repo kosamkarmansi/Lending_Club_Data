@@ -11,45 +11,75 @@ Most business time series are not as good looking, or as some macroeconomic data
 ### lendingClub.csv (All averages are the values averaged over the # of loans per state per month)
 
 Variable -Definition
+
 date-Monthly date
+
 state-State abbreviation
+
 Loans (avg and total)-The amount of loan issued in dollars
+
 term (average)-The period in which the number of payments made are calculated (months)
+
 intRate (average)-Interest rate on the loan (in percentages)
+
 grade (average)-Loan grade assigned by the algorithm (A=1, B=2, C=3, D=4, E=5, F=6)
+
 empLength (average)-Employment length of the borrower (in years)
+
 annualInc (average)-The self-reported annual income provided by the borrower during registration
+
 verifStatus (average)-Indicates if the income is verified by LendingClub (Verified=1, Not Verified=0)
+
 homeOwner (average)-The home ownership status provided by the borrower during registration or obtained from the credit report (OWN=1, RENT OR OTHERWISE=0)
+
 openAcc (average)-The number of open credit lines in the borrower's credit file
+
 revolBal (average)-Total credit revolving balance
+
 revolUtil (average)-Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit-totalAcc (average)-The total number of credit lines currently open in the borrower's credit file
+
 countOfLoans-The number of loans per month per state (tally taken during aggregation)
 
 ### nyEcon.csv
 
 Variable - Definition
+
 date-Monthly date
+
 NYCPI-Consumer price index in New York
+
 NYUnemployment-Unemployment rate in New York -Seasonally adjusted
+
 NYCondoPriceIdx-Condo price index in New York -Seasonally adjusted
+
 NYSnapBenefits-Number of SNAP benefits recipients in New York
 
 ### retailSales.csv
+
 Variable - Definition
+
 date-Monthly date
+
 sales-U.S. retail sales in million dollars
 
 ### usEcon.csv
 
 Variable - Definition
+
 date-Monthly date
+
 income-Personal income (in billions of dollars) -Seasonally adjusted
+
 unemployment-Unemployment rate -Seasonally adjusted
+
 tenYearTreasury-10-Year treasury constant maturity minus 2-Year treasury constant maturity
+
 CPI-Consumer price index
+
 inflation-Inflation rate -Calculated from the consumer price index
+
 vehicleSales-Total vehicle sale in the U.S. (in millions of units) -Seasonally adjusted
+
 houseSales-New houses sold in the U.S. (in thousands) -Seasonally adjusted
 
 ## Predicting/forecasting the LendingClub loans
