@@ -206,30 +206,6 @@ Eg: I have used 7th order MA which produces a similar plot to the one in 2(d).
 Btw, isn’t that an impressive R-squared, achieved by using only the trend and seasons?
 The R squared value of 97.59 is impressive with just seasonality and trend.
 
-Series: sales 
-Model: TSLM 
-
-Residuals:
-   Min     1Q Median     3Q    Max 
--43506  -6799    329   7662  33529 
-
-Coefficients:
-                 Estimate Std. Error t value Pr(>|t|)    
-(Intercept)    118607.944   2948.209  40.231  < 2e-16 ***
-trend()           879.249      7.895 111.365  < 2e-16 ***
-season()year2   -2107.214   3717.967  -0.567    0.571    
-season()year3   32961.493   3751.141   8.787  < 2e-16 ***
-season()year4   26615.138   3751.083   7.095 8.13e-12 ***
-season()year5   43380.853   3751.041  11.565  < 2e-16 ***
-season()year6   34385.747   3751.017   9.167  < 2e-16 ***
-season()year7   33746.927   3751.008   8.997  < 2e-16 ***
-season()year8   40570.572   3751.017  10.816  < 2e-16 ***
-season()year9   18758.787   3751.041   5.001 9.35e-07 ***
-season()year10  27201.181   3751.083   7.252 3.03e-12 ***
-season()year11  33160.718   3751.141   8.840  < 2e-16 ***
-season()year12  81780.970   3751.216  21.801  < 2e-16 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14160 on 325 degrees of freedom
 Multiple R-squared: 0.9759,	Adjusted R-squared: 0.975
@@ -245,8 +221,6 @@ Yt = 826.752 + 0.926Yt-1 - 0.479Et-1 - 01030Et-2 - 0.184 Et-3  - 0.338SEt-1 - 0.
 Et is white noise with std error = 6247 . The AIC, BIC values are AIC=6638.23   AICc=6638.69   BIC=6668.53. The variation has reduced in the time plot as compared to the previous model. The histogram appears to be more normal.
 
 Run unit root tests to determine the amount of ordinary and seasonal differencing needed. Apply the suggested differencing, and run a KPSS test to check whether the KPSS test gives a pass on the stationarity of time series after the differencing applied. Finally, create two PACF plots for before vs. after differencing. Compare and discuss.
-Hint: In some cases, if the seasonality is strong, applying the seasonal differencing first (and ordinary differences next) may help achieve a more stationary time series.
-Hint: In inspecting PACF plots, don’t forget to pay attention to the correlation values.
 Before: The test statistic is much bigger than the 1% critical value, indicating that the null hypothesis is rejected. That is, the data are not stationary. We can difference the data, and apply the test again.
 Because unitroot_nsdiffs() returns 1 (indicating one seasonal difference is required), we apply the unitroot_ndiffs() function to the seasonally differenced data. These functions suggest we should do both a seasonal difference and a first difference.
 After: doing seasonal differencing, the ndiff as well as nsdiff becomes 0 and the kpss statistic is much smaller- 0.1574261 which means our data has become stationary.
