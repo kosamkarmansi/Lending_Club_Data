@@ -239,20 +239,7 @@ The time plot shows some changing variation over time. This heteroskedasticity w
 We can see in the histogram that the residuals are a bit skewed, which might affect coverage probability of the prediction intervals.
 
 
-### Build an ARIMA model. Report your output, and provide a short discussion of the results. Check the residual diagnostics.How do you think the ARIMA model compares with the regression from 3(a)? What do the coefficients tell you in this case?Series: sales 
-Model: ARIMA(1,0,3)(0,1,2)[12] w/ drift 
-
-Coefficients:
-         ar1      ma1     ma2     ma3     sma1
-      0.9260  -0.4786  0.0103  0.1839  -0.3376
-s.e.  0.0269   0.0638  0.0739  0.0608   0.0548
-         sma2  constant
-      -0.2596  826.7518
-s.e.   0.0484  103.0485
-
-sigma^2 estimated as 39034949:  log likelihood=-3311.12
-AIC=6638.23   AICc=6638.69   BIC=6668.53
-
+### Build an ARIMA model. Report your output, and provide a short discussion of the results. Check the residual diagnostics.How do you think the ARIMA model compares with the regression from 3(a)? What do the coefficients tell you in this 
 This is ARIMA model (1,0,3)(0,1,2)[12] with drift
 Yt = 826.752 + 0.926Yt-1 - 0.479Et-1 - 01030Et-2 - 0.184 Et-3  - 0.338SEt-1 - 0.027 SEt-2 
 Et is white noise with std error = 6247 . The AIC, BIC values are AIC=6638.23   AICc=6638.69   BIC=6668.53. The variation has reduced in the time plot as compared to the previous model. The histogram appears to be more normal.
